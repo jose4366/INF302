@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CambiaColores.MainPage">
+    <Grid
+        Padding="30,100,30,100"
+        x:Name="Pagina"
+        RowDefinitions="5*,*,*,*,*"
+        ColumnDefinitions=" *, Auto, Auto"
+        RowSpacing="5"
+        BackgroundColor="#FF5E5D5E">
+        <Grid 
+            Padding="0,0,0,0"
+            RowDefinitions="*,*,*"
+            ColumnDefinitions="*"
+            Grid.Row = "0" 
+            Grid.ColumnSpan="3"  
+            BackgroundColor="#FF9E7555">
+            <Slider x:Name="redSlider" Minimum="0" Maximum="255" ValueChanged="Slider_ValueChanged" VerticalOptions="Center" Grid.Row="0" Grid.Column="0" />
+            <Slider x:Name="greenSlider" Minimum="0" Maximum="255" ValueChanged="Slider_ValueChanged" VerticalOptions="Center" Grid.Row="1" Grid.Column="0" />
+            <Slider x:Name="blueSlider" Minimum="0" Maximum="255" ValueChanged="Slider_ValueChanged" VerticalOptions="Center" Grid.Row="2" Grid.Column="0" />
+        </Grid>
+        <Label x:Name="rgbValueLabel" Text="RGB: (0,0,0)" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="0"/>
+        <Border Stroke="Black" StrokeThickness="2" StrokeShape="Rectangle" HeightRequest="20" WidthRequest="20" Grid.Row="1" Grid.Column="1" >
+            <BoxView x:Name="preColor" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" />
+        </Border>
+        <Label x:Name="hexValueLabel" Text="#000000" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="2"/>
+        <Button Text="Copiar Color" Clicked="Clipboard_Clicked" Grid.Row="2" Grid.Column="1"/>
+        <Button Text="ColorAleatorio" Clicked="RandomButton_Clicked"  VerticalOptions="End" Grid.Row="3" Grid.Column="1"/>
+        <Button Text="CambiarColor" Clicked="OnChangeBackground" VerticalOptions="End" Grid.Row="4" Grid.Column="1"/>
+    </Grid>
+
+
+</ContentPage>
