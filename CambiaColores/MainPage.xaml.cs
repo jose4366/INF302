@@ -31,7 +31,7 @@ public partial class MainPage : ContentPage
 		rgbValueLabel.Text = $"RGB: ({red},{green},{blue})";
 		preColor.BackgroundColor = Color.FromRgb(red,green,blue);
 		string hexColor = ColorPropiedades.ColorToHex(red,green,blue);
-		hexValueLabel.Text = $"#{hexColor}";
+		hexValueLabel.Text = $"{hexColor}";
 		
 
 
