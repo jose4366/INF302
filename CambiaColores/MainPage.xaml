@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CambiaColores.MainPage">
@@ -9,17 +9,21 @@
         ColumnDefinitions=" *, Auto, Auto"
         RowSpacing="5"
         BackgroundColor="#FF5E5D5E">
-        <Grid 
-            Padding="0,0,0,0"
-            RowDefinitions="*,*,*"
-            ColumnDefinitions="*"
-            Grid.Row = "0" 
-            Grid.ColumnSpan="3"  
-            BackgroundColor="#FF9E7555">
-            <Slider x:Name="redSlider" Minimum="0" Maximum="255" ValueChanged="Slider_ValueChanged" VerticalOptions="Center" Grid.Row="0" Grid.Column="0" />
-            <Slider x:Name="greenSlider" Minimum="0" Maximum="255" ValueChanged="Slider_ValueChanged" VerticalOptions="Center" Grid.Row="1" Grid.Column="0" />
-            <Slider x:Name="blueSlider" Minimum="0" Maximum="255" ValueChanged="Slider_ValueChanged" VerticalOptions="Center" Grid.Row="2" Grid.Column="0" />
-        </Grid>
+        <Border Stroke="Black" StrokeThickness="2" StrokeShape="RoundRectangle 20,20,20,20" 
+                Grid.Row ="0" 
+                Grid.ColumnSpan="3" 
+                >
+            <Grid 
+                Padding="0,0,0,0"
+                RowDefinitions="*,*,*"
+                ColumnDefinitions="*"
+                BackgroundColor="#FF9E9D9D">
+                <Slider x:Name="redSlider" Minimum="0" Maximum="255" ValueChanged="Slider_ValueChanged" VerticalOptions="Center" Grid.Row="0" Grid.Column="0" />
+                <Slider x:Name="greenSlider" Minimum="0" Maximum="255" ValueChanged="Slider_ValueChanged" VerticalOptions="Center" Grid.Row="1" Grid.Column="0" />
+                <Slider x:Name="blueSlider" Minimum="0" Maximum="255" ValueChanged="Slider_ValueChanged" VerticalOptions="Center" Grid.Row="2" Grid.Column="0" />
+            </Grid>
+        </Border>
+
         <Label x:Name="rgbValueLabel" Text="RGB: (0,0,0)" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="0"/>
         <Border Stroke="Black" StrokeThickness="2" StrokeShape="Rectangle" HeightRequest="20" WidthRequest="20" Grid.Row="1" Grid.Column="1" >
             <BoxView x:Name="preColor" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" />
