@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CambiaColores.MainPage">
+    <Grid
+        Padding="0,0,0,0"
+        x:Name="Pagina"
+        RowDefinitions="*,*,*,*,*,*"
+        ColumnDefinitions=" *"
+        RowSpacing="5"
+        BackgroundColor="#FF5E5D5E">
+        <Frame 
+            Grid.Row="0" 
+            Grid.RowSpan="2"
+            Grid.Column="0"
+            BorderColor="#FF9E9D9D"
+            Background="#FF9E9D9D"
+            Padding="0"
+            CornerRadius="50">
+            <Grid 
+                Padding="0,0,0,0"
+                Grid.Row="0" 
+                Grid.RowSpan="2"
+                Grid.Column="0"
+                RowDefinitions="*,*,*"
+                ColumnDefinitions="2*,*">
+            
+            <Label Text="Total P/Persona" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" TextColor="#FF0F02FF"/>
+            <Label Text="{Binding Total}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0"/>   
+            <Label Text="{Binding SubTotal , StringFormat='Subtotal {0:F0}'}" HorizontalOptions="Start" VerticalOptions="Start" Grid.Row="1" Grid.Column="1"/>
+            <Label Text="{Binding Propina, StringFormat='Propina {0:F0}'}" HorizontalOptions="Start" VerticalOptions="Start" Grid.Row="2" Grid.Column="1"/>
+
+        </Grid>
+         </Frame>
+
+        <Grid ColumnDefinitions="*,1.75*,*" 
+            Padding="0,20,0,20"
+            Grid.Row="2"
+            Grid.Column="0">
+            <Label Text="Valor Boleta: $" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="0" />
+            <Entry Keyboard="Numeric" Text="{Binding TotalBoleta}"   Grid.Column="1" Background="#FF9E9D9D" />
+            <Button Text="Calcular" Command="{Binding ActualizarDatosCommand}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0"  Grid.Column="2"/>
+        </Grid>
+        <Grid 
+            Padding="0,0,0,0"
+            Grid.Row="3" 
+            Grid.Column="0"
+            RowDefinitions="*"
+            ColumnDefinitions="*,*,*,*">
+            
+            <Label Text="Elige la propina" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="0"/>
+            <Button Text="10%" Command="{Binding AsignarPropinaCommand}" CommandParameter="10"  VerticalOptions="Center" Margin="5" Grid.Row="0" Grid.Column="1" />
+            <Button Text="15%" Command="{Binding AsignarPropinaCommand}" CommandParameter="15"  VerticalOptions="Center" Margin="5" Grid.Row="0" Grid.Column="2"/>
+            <Button Text="20%" Command="{Binding AsignarPropinaCommand}" CommandParameter="20"  VerticalOptions="Center" Margin="5" Grid.Row="0" Grid.Column="3"/>
+
+        </Grid>
+        <Grid 
+            Padding="0,0,0,0"
+            Grid.Row="4" 
+            Grid.Column="0"
+            RowDefinitions="*"
+            ColumnDefinitions="*,*,*">
+            <Label Text="{Binding PorcernajePropina, StringFormat='Propina: %{0:F0}'}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="0"/>
+            <Slider Minimum="0" Maximum="100" Value="{Binding PorcernajePropina,Mode=TwoWay}" VerticalOptions="Center" Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="1" />
+        </Grid>
+            <Grid 
+            Padding="0,0,0,0"
+            Grid.Row="5" 
+            Grid.Column="0"
+            RowDefinitions="*"
+            ColumnDefinitions="*,3*">
+            
+            <Label Text="Dividir el total" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="0"/>
+            <Frame 
+            Grid.Row="0" 
+            Grid.Column="1"
+            BorderColor="#FF9E9D9D"
+            Background="#FF9E9D9D"
+            Padding="0"
+            CornerRadius="50"
+            VerticalOptions="Center">
+            <Grid ColumnDefinitions="*,*,*" >
+            <Button Text="-" Command="{Binding DisminuirCantidadPersonasCommand}"   Grid.Column="0" />
+            <Label Text="{Binding CantidadPersonas}" HorizontalOptions="Center" VerticalOptions="Center"  Grid.Column="1"/>
+            <Button Text="+" Command="{Binding AumentarCantidadPersonasCommand}"    Grid.Column="2"/>
+            </Grid>
+            </Frame>
+
+        </Grid>
+    </Grid>
+
+
+</ContentPage>
