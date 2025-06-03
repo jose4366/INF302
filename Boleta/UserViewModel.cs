@@ -32,7 +32,6 @@ public partial class UserViewModel : ObservableObject {
         cantidadPersonas = 1;
     }
 
-    [RelayCommand]
     public void ActualizarDatos() {
         if (TotalBoleta >= 0)
         {
@@ -40,6 +39,18 @@ public partial class UserViewModel : ObservableObject {
             Total = CalcularTotal();
         }
     }
+
+    partial void OnPorcentajePropinaChanged(int value)
+    {
+        ActualizarDatos();
+    }
+
+    partial void OnTotalBoletaChanged(float value)
+    {
+        ActualizarDatos();
+    }
+
+
 
     [RelayCommand]
     private void AsignarPropina(string value)
@@ -63,14 +74,18 @@ public partial class UserViewModel : ObservableObject {
     }
 
     [RelayCommand]
-    public void AumentarCantidadPersonas(){
-        CantidadPersonas +=1;
+    public void AumentarCantidadPersonas()
+    {
+        CantidadPersonas += 1;
+        ActualizarDatos();
     }
 
     [RelayCommand]
     public void DisminuirCantidadPersonas(){
-        if(CantidadPersonas >= 2){
-            CantidadPersonas -=1;
+        if (CantidadPersonas >= 2)
+        {
+            CantidadPersonas -= 1;
+            ActualizarDatos();
         }
         
     }

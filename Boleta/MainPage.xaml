@@ -38,8 +38,7 @@
             Grid.Row="2"
             Grid.Column="0">
             <Label Text="Valor Boleta: $" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="0" WidthRequest="100"/>
-            <Entry Keyboard="Numeric" Text="{Binding TotalBoleta}"   Grid.Column="1" Background="#FF9E9D9D" HeightRequest="40" WidthRequest="100"/>
-            <Button Text="Calcular" Command="{Binding ActualizarDatosCommand}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0"  Grid.Column="2"/>
+            <Entry Keyboard="Numeric" Text="{Binding TotalBoleta}"   Grid.Column="1" Grid.ColumnSpan="2" Background="#FF9E9D9D" HeightRequest="40" WidthRequest="180"/>
         </Grid>
         <Grid 
             Padding="0,0,0,0"
