@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace CambiaColores;
+namespace Boleta;
 
 [Application]
 public class MainApplication : MauiApplication

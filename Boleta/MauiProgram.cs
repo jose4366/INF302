@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace CambiaColores;
+namespace Boleta;
 
 public static class MauiProgram
 {

@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace CambiaColores;
+namespace Boleta;
 
 public class Program
 {

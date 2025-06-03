@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CambiaColores.MainPage">
+             x:Class="Boleta.MainPage">
     <Grid
-        Padding="0,0,0,0"
+        Padding="20,20,20,20"
         x:Name="Pagina"
         RowDefinitions="*,*,*,*,*,*"
         ColumnDefinitions=" *"
@@ -16,7 +16,7 @@
             BorderColor="#FF9E9D9D"
             Background="#FF9E9D9D"
             Padding="0"
-            CornerRadius="50">
+            CornerRadius="25">
             <Grid 
                 Padding="0,0,0,0"
                 Grid.Row="0" 
@@ -26,7 +26,7 @@
                 ColumnDefinitions="2*,*">
             
             <Label Text="Total P/Persona" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" TextColor="#FF0F02FF"/>
-            <Label Text="{Binding Total}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0"/>   
+            <Label Text="{Binding Total}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" FontSize="24"/>   
             <Label Text="{Binding SubTotal , StringFormat='Subtotal {0:F0}'}" HorizontalOptions="Start" VerticalOptions="Start" Grid.Row="1" Grid.Column="1"/>
             <Label Text="{Binding Propina, StringFormat='Propina {0:F0}'}" HorizontalOptions="Start" VerticalOptions="Start" Grid.Row="2" Grid.Column="1"/>
 
@@ -37,8 +37,8 @@
             Padding="0,20,0,20"
             Grid.Row="2"
             Grid.Column="0">
-            <Label Text="Valor Boleta: $" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="0" />
-            <Entry Keyboard="Numeric" Text="{Binding TotalBoleta}"   Grid.Column="1" Background="#FF9E9D9D" />
+            <Label Text="Valor Boleta: $" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="0" WidthRequest="100"/>
+            <Entry Keyboard="Numeric" Text="{Binding TotalBoleta}"   Grid.Column="1" Background="#FF9E9D9D" HeightRequest="40" WidthRequest="100"/>
             <Button Text="Calcular" Command="{Binding ActualizarDatosCommand}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0"  Grid.Column="2"/>
         </Grid>
         <Grid 
@@ -60,8 +60,8 @@
             Grid.Column="0"
             RowDefinitions="*"
             ColumnDefinitions="*,*,*">
-            <Label Text="{Binding PorcernajePropina, StringFormat='Propina: %{0:F0}'}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="0"/>
-            <Slider Minimum="0" Maximum="100" Value="{Binding PorcernajePropina,Mode=TwoWay}" VerticalOptions="Center" Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="1" />
+            <Label Text="{Binding PorcentajePropina, StringFormat='Propina: {0:F0}%'}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="0"/>
+            <Slider Minimum="0" Maximum="50" Value="{Binding PorcentajePropina,Mode=TwoWay}" VerticalOptions="Center" Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="1" />
         </Grid>
             <Grid 
             Padding="0,0,0,0"

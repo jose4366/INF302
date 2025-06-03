@@ -1,7 +1,7 @@
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace CambiaColores;
+namespace Boleta;
 
 public partial class UserViewModel : ObservableObject {
 
@@ -16,7 +16,7 @@ public partial class UserViewModel : ObservableObject {
     [ObservableProperty]
     private float propina;
     [ObservableProperty]
-    private int porcernajePropina;
+    private int porcentajePropina;
 
     [ObservableProperty]
     private int cantidadPersonas;
@@ -28,7 +28,7 @@ public partial class UserViewModel : ObservableObject {
         total = 0;
         subTotal = 0;
         propina = 0;
-        porcernajePropina = 0;
+        porcentajePropina = 0;
         cantidadPersonas = 1;
     }
 
@@ -47,19 +47,19 @@ public partial class UserViewModel : ObservableObject {
         // Convierte el parámetro a double y asigna la propina
         if (double.TryParse(value, out double resultado))
         {
-            PorcernajePropina = (int)resultado;
+            PorcentajePropina = (int)resultado;
         }
     }
 
     public float CalcularTotal()
     {
-        Propina = SubTotal * PorcernajePropina / 100;
+        Propina = (float)Math.Ceiling(SubTotal * PorcentajePropina / 100.0);
         return SubTotal + Propina;
 
     }
     public float CalcularSubTotal()
     {
-        return TotalBoleta / CantidadPersonas;
+        return (float)Math.Ceiling(TotalBoleta / (double)CantidadPersonas);
     }
 
     [RelayCommand]

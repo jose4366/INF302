@@ -1,4 +1,4 @@
-﻿namespace CambiaColores;
+﻿namespace Boleta;
 
 public partial class MainPage : ContentPage
 {
