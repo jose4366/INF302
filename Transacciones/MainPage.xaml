@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CambiaColores.MainPage">
+
+    <Grid Padding="0"
+          RowDefinitions="*,*,*,*,Auto,*"
+          ColumnDefinitions="*"
+          RowSpacing="5"
+          BackgroundColor="White">
+
+        <!-- Fondo morado y saludo -->
+        <BoxView Grid.Row="0"
+                 CornerRadius="40"
+                 BackgroundColor="#4B0082"
+                 HeightRequest="200" />
+        
+        <Label Text="{Binding Nombre, StringFormat='Hola, {0}'}"
+               HorizontalOptions="Center"
+               Margin="0,15,0,0"
+               FontSize="Large"
+               VerticalOptions="Start"
+               Grid.Row="0"
+               TextColor="White"/>   
+
+        <!-- Frame con resumen financiero -->
+        <Frame Grid.Row="0"
+               Margin="20,60,20,0"
+               CornerRadius="20"
+               BackgroundColor="White"
+               HasShadow="True"
+               HeightRequest="140"
+               VerticalOptions="Start"
+               Padding="20">
+
+            <Grid Margin="0,10,0,0"
+                  RowDefinitions="*,*,*,*"
+                  ColumnDefinitions="*,*">
+
+                <Label Text="Balance" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="{Binding Balance, StringFormat='${0:F1}'}" Grid.Row="1" Grid.Column="0" FontSize="Medium"/>  
+                <Label Text="Egresos" Grid.Row="2" Grid.Column="0"/>   
+                <Label Text="{Binding Egresos , StringFormat='${0:F1}'}" Grid.Row="3" Grid.Column="0" FontSize="Medium"/>
+                <Label Text="Ingresos" Grid.Row="2" Grid.Column="1"/>
+                <Label Text="{Binding Ingresos, StringFormat='${0:F1}'}" Grid.Row="3" Grid.Column="1" FontSize="Medium"/>
+
+                <Button Text="+" Grid.Row="2" Grid.Column="1"
+                        Grid.RowSpan="2"
+                        Command="{Binding IrASegundaPaginaCommand}"
+                        BackgroundColor="#4B0082"
+                        TextColor="White"
+                        FontSize="Large"
+                        Margin="0"
+                        CornerRadius="200"
+                        HorizontalOptions="End"/>
+            </Grid>
+        </Frame>
+
+        <!-- Lista de transacciones -->
+        <CollectionView Grid.Row="2"
+                        Grid.RowSpan="4"
+                        ItemsSource="{Binding Transacciones}"
+                        Margin="20">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="Gray"
+                           CornerRadius="10"
+                           Margin="0,5"
+                           Padding="10">
+
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Glosa}" FontAttributes="Bold"/>
+                            <Label Text="{Binding Cantidad, StringFormat='${0:F1}'}" TextColor="{Binding CantidadColor}"/>
+                            <Label Text="{Binding Fecha, StringFormat='Fecha: {0:dd/MM/yyyy}'}"/>
+                        </VerticalStackLayout>
+
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
+</ContentPage>

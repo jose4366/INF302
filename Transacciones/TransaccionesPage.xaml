@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CambiaColores.TransaccionesPage"
+             Title="Gastos">
+    <Grid
+        Padding="0,0,0,0"
+        x:Name="Pagina"
+        RowDefinitions="*,*,*,*,*,*"
+        ColumnDefinitions=" *"
+        RowSpacing="5"
+        BackgroundColor="White">
+        <BoxView Grid.Row="0"
+            CornerRadius="40"
+            BackgroundColor="#4B0082"
+            HeightRequest="200" />
+        <Label  Text="Nueva Transacción" HorizontalOptions="Center" Margin="0,15,0,0" FontSize="Large" VerticalOptions="Start" Grid.Row="0" TextColor="White"/>   
+        <Frame Grid.Row="0"
+               Margin="20,60,20,0"
+               CornerRadius="20"
+               BackgroundColor="White"
+               HasShadow="True"
+               HeightRequest="400"
+               VerticalOptions="Start"
+               Padding="20">
+            
+            <Grid 
+                Padding="0,0,0,0"
+                Grid.Row="0" 
+                Grid.RowSpan="2"
+                Grid.Column="0"
+                Margin="0,10,0,0"
+                RowDefinitions="*,*,*,*,*,*,*,*"
+                ColumnDefinitions="Auto,*">
+            
+                        
+            <Label Text="Glosa" HorizontalOptions="Start" VerticalOptions="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1"/>
+            <Entry Keyboard="Chat" Text="{Binding Glosa}" Margin="20,0,20,0" Grid.Row="1" Grid.ColumnSpan="2"  /> 
+
+            <Label Text="Cantidad" HorizontalOptions="Start" VerticalOptions="Center" Grid.Row="2" Grid.Column="0"/>
+            <Entry Keyboard="Numeric" Text="{Binding Cantidad}" Margin="10,0,10,0" Grid.Row="3" Grid.ColumnSpan="2" /> 
+
+            <Label Text="Fecha" HorizontalOptions="Start" VerticalOptions="Center" Grid.Row="4" Grid.Column="0"/>
+            <DatePicker Date="{Binding Fecha}" Format="dd/MM/yyyy" Margin="20,0,20,0" MaximumDate="{Binding MaxDate}" MinimumDate="{Binding MinDate}" Grid.Row="5" Grid.ColumnSpan="2" />
+            
+            <Label Text="¿Es ingreso?" HorizontalOptions="Start" VerticalOptions="Center" Grid.Row="6" Grid.Column="1"/>
+            <Grid
+                Grid.Row="6" 
+                Grid.Column="0">
+            <!-- Cuadro exterior con borde -->
+            <BoxView Style="{StaticResource CheckBoxBox}" BackgroundColor="#00C47979"/>
+
+            <!-- Relleno si está seleccionado -->
+            <BoxView IsVisible="{Binding Ingreso}" 
+                    BackgroundColor="Purple" 
+                    Margin="3"/>
+            
+            <!-- Gesture para cambiar el valor -->
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding AlternarIngresoCommand}" />
+            </Grid.GestureRecognizers>
+            </Grid>
+            
+            <Button Text="Guardar"
+            Grid.Row="7"
+            BackgroundColor="#4B0082"
+            TextColor="White"
+            FontSize="Large"
+            Grid.Column="0"
+            Command="{Binding AgregarTransaccionesCommand}"
+            Margin="0,0,0,0"
+            CornerRadius="10"
+            HorizontalOptions="End"/>
+
+            <Button Text="Cancelar"
+            Grid.Row="7"
+            BackgroundColor="#FFF30000"
+            TextColor="White"
+            FontSize="Large"
+            Grid.Column="1"
+            Command="{Binding IrAMainPageCommand}"
+            Margin="0,0,0,0"
+            CornerRadius="10"
+            HorizontalOptions="End"/>
+            </Grid>
+
+
+        
+         </Frame>
+
+
+
+    </Grid>
+</ContentPage>

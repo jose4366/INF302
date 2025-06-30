@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CambiaColores</name>
+    </assembly>
+    <members>
+        <member name="T:CambiaColores.UserViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:CambiaColores.UserViewModel.Nombre">
+            <inheritdoc cref="F:CambiaColores.UserViewModel.nombre"/>
+        </member>
+        <member name="P:CambiaColores.UserViewModel.Balance">
+            <inheritdoc cref="F:CambiaColores.UserViewModel.balance"/>
+        </member>
+        <member name="P:CambiaColores.UserViewModel.Egresos">
+            <inheritdoc cref="F:CambiaColores.UserViewModel.egresos"/>
+        </member>
+        <member name="P:CambiaColores.UserViewModel.Ingresos">
+            <inheritdoc cref="F:CambiaColores.UserViewModel.ingresos"/>
+        </member>
+        <member name="P:CambiaColores.UserViewModel.Glosa">
+            <inheritdoc cref="F:CambiaColores.UserViewModel.glosa"/>
+        </member>
+        <member name="P:CambiaColores.UserViewModel.Cantidad">
+            <inheritdoc cref="F:CambiaColores.UserViewModel.cantidad"/>
+        </member>
+        <member name="P:CambiaColores.UserViewModel.Fecha">
+            <inheritdoc cref="F:CambiaColores.UserViewModel.fecha"/>
+        </member>
+        <member name="P:CambiaColores.UserViewModel.Ingreso">
+            <inheritdoc cref="F:CambiaColores.UserViewModel.ingreso"/>
+        </member>
+        <member name="P:CambiaColores.UserViewModel.Transacciones">
+            <inheritdoc cref="F:CambiaColores.UserViewModel.transacciones"/>
+        </member>
+        <member name="F:CambiaColores.UserViewModel.agregarTransaccionesCommand">
+            <summary>The backing field for <see cref="P:CambiaColores.UserViewModel.AgregarTransaccionesCommand"/>.</summary>
+        </member>
+        <member name="P:CambiaColores.UserViewModel.AgregarTransaccionesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:CambiaColores.UserViewModel.AgregarTransacciones"/>.</summary>
+        </member>
+        <member name="F:CambiaColores.UserViewModel.irASegundaPaginaCommand">
+            <summary>The backing field for <see cref="P:CambiaColores.UserViewModel.IrASegundaPaginaCommand"/>.</summary>
+        </member>
+        <member name="P:CambiaColores.UserViewModel.IrASegundaPaginaCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:CambiaColores.UserViewModel.IrASegundaPagina"/>.</summary>
+        </member>
+        <member name="F:CambiaColores.UserViewModel.irAMainPageCommand">
+            <summary>The backing field for <see cref="P:CambiaColores.UserViewModel.IrAMainPageCommand"/>.</summary>
+        </member>
+        <member name="P:CambiaColores.UserViewModel.IrAMainPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:CambiaColores.UserViewModel.IrAMainPage"/>.</summary>
+        </member>
+        <member name="F:CambiaColores.UserViewModel.alternarIngresoCommand">
+            <summary>The backing field for <see cref="P:CambiaColores.UserViewModel.AlternarIngresoCommand"/>.</summary>
+        </member>
+        <member name="P:CambiaColores.UserViewModel.AlternarIngresoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:CambiaColores.UserViewModel.AlternarIngreso"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Nombre">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Nombre" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Balance">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Balance" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Egresos">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Egresos" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Ingresos">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Ingresos" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Glosa">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Glosa" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Cantidad">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Cantidad" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Fecha">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Fecha" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Ingreso">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Ingreso" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Transacciones">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Transacciones" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Nombre">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Nombre" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Balance">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Balance" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Egresos">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Egresos" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Ingresos">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Ingresos" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Glosa">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Glosa" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Cantidad">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Cantidad" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Fecha">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Fecha" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Ingreso">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Ingreso" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Transacciones">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Transacciones" generated properties.</summary>
+        </member>
+    </members>
+</doc>
